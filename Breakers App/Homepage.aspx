@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+
 <title>NZ Breakers Homepage</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,32 +7,195 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="Content/StyleSheet1.css">
+
+<!--
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
 body {font-family: "Open Sans"}
+
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: #33aee3;
+  color: white;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
 </style>
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+</script>
+
+  <div id="navbar">
+  <a class="active" href="javascript:void(0)">Home</a>
+  <a href="javascript:void(0)">News</a>
+  <a href="javascript:void(0)">Players</a>
+</div>
+
+-->
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#">Home</a>
+  <a href="#">News</a>
+  <a href="#">Players</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰</button>  
+</div>
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "188px";
+        document.getElementById("main").style.marginLeft = "188px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+   </body>
+
+
 <body class="w3-light-grey">
 
-<!-- Navigation bar with social media icons -->
-<div class="w3-bar w3-black w3-hide-small">
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-facebook-official"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-flickr"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
-</div>
-  
+
+
 <!-- w3-content defines a container for fixed size centered content, 
 and is wrapped around the whole page content, except for the footer in this example -->
 <div class="w3-content" style="max-width:1600px">
 
-  <!-- Header -->
+
+  <!-- Header 
   <header class="w3-container w3-center w3-padding-48 w3-white">
-    <h1 class="w3-xxxlarge"><b>NZ SkySport Breakers</b></h1>
-    <h6>Welcome to the <span class="w3-tag">NZ Breakers</span> page</h6>
+   
   </header>
+    -->
+
 
   <!-- Image header -->
   <header class="w3-display-container w3-wide" id="home">
@@ -45,7 +208,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- Blog entries -->
     <div class="w3-col l8 s12">
     
-      <!-- Blog entry -->
+      <!-- Blog entry -->   
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
           <h3>TITLE HEADING</h3>
@@ -74,7 +237,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       </div>
       <hr>
 
-      <!-- Blog entry -->
+      <!-- Blog entry 
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
           <h3>TITLE HEADING</h3>
@@ -89,8 +252,10 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
           <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')"><b>Replies  </b> <span class="w3-tag w3-white">2</span></button></p>
           <p class="w3-clear"></p>
+
+          -->
           
-          <!-- Example of comment field -->
+          <!-- Example of comment field 
           <div id="demo2" style="display:none">
             <div class="w3-row">
               <hr>
@@ -114,8 +279,8 @@ and is wrapped around the whole page content, except for the footer in this exam
           </div>
         </div>
       </div>
-
-      <!-- Blog entry -->
+    -->
+      <!-- Blog entry 
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
           <h3>TITLE HEADING</h3>
@@ -130,8 +295,8 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
           <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
           <p class="w3-clear"></p>
-          
-          <!-- Example of comment field -->
+          -->
+          <!-- Example of comment field 
           <div id="demo3" style="display:none">
             <hr>
             <div class="w3-row w3-margin-bottom">
@@ -162,7 +327,7 @@ and is wrapped around the whole page content, except for the footer in this exam
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
       
     <!-- END BLOG ENTRIES -->
@@ -170,7 +335,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <!-- About/Information menu -->
     <div class="w3-col l4">
-      <!-- About Card -->
+      <!-- About Card 
       <div class="w3-white w3-margin">
         <img src="/w3images/avatar_girl2.jpg" alt="Jane" style="width:100%" class="w3-grayscale">
         <div class="w3-container w3-black">
@@ -178,35 +343,42 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
         </div>
       </div>
+          
       <hr>
-
+        --> 
       <!-- Posts -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-black">
-          <h4>Popular Posts</h4>
+          <h4>Team Information</h4>
         </div>
         <ul class="w3-ul w3-hoverable w3-white">
           <li class="w3-padding-16">
             <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Denim</span>
+            <span class="w3-large">Lebron</span>
             <br>
             <span>Sed mattis nunc</span>
           </li>
           <li class="w3-padding-16">
             <img src="/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Sweaters</span>
+            <span class="w3-large">Giannis</span>
             <br>
             <span>Praes tinci sed</span>
           </li>
           <li class="w3-padding-16">
             <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-            <span class="w3-large">Workshop</span>
+            <span class="w3-large">Harden</span>
             <br>
             <span>Ultricies congue</span>
           </li>
           <li class="w3-padding-16">
             <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
-            <span class="w3-large">Trends</span>
+            <span class="w3-large">Curry</span>
+            <br>
+            <span>Lorem ipsum dipsum</span>
+          </li>
+          <li class="w3-padding-16">
+            <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia" style="width:50px">
+            <span class="w3-large">Caruso</span>
             <br>
             <span>Lorem ipsum dipsum</span>
           </li>
@@ -214,7 +386,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       </div>
       <hr>
 
-      <!-- Advertising -->
+      <!-- Advertising 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-black">
           <h4>Advertise</h4>
@@ -226,8 +398,8 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
       </div>
       <hr>
-
-      <!-- Tags -->
+        -->
+      <!-- Tags 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-black">
           <h4>Tags</h4>
@@ -243,8 +415,8 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
       </div>
       <hr>
-
-      <!-- Inspiration -->
+        -->
+      <!-- Inspiration 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-black">
           <h4>Inspiration</h4>
@@ -261,6 +433,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
       </div>
       <hr>
+          -->
 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-black">
